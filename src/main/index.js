@@ -1,10 +1,12 @@
 import {  app  } from "electron";
 import createMainWindow from "./createMainWindow";
+import setAppMenu from "./setAppMenu";
 
 let mainWindow = null;
 
 app.on("ready", () => {
     mainWindow = createMainWindow();
+    setAppMenu({ openFile, saveFile, saveAsFile, exportPDF });
 });
 
 app.on("window-all-closed", () => {
@@ -18,3 +20,21 @@ app.on("activate", (_e, hasVisibleWindows) => {
         mainWindow = createMainWindow();
     }
 });
+
+function openFile() {
+    console.log("openFile");
+}
+
+function saveFile() {
+    console.log("saveFile");
+}
+
+function saveAsFile() {
+    console.log("saveAsNewFile");
+}
+
+function exportPDF() {
+    console.log("exportPDF");
+}
+
+

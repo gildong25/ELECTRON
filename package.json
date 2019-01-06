@@ -2,13 +2,16 @@
   "name": "markdown_editor",
   "version": "1.0.0",
   "description": "",
-  "main": ".tmp/main/index.js",
+  "main": "dist/main/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "electron ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "electron": "^4.0.1",
     "photon": "github:connors/photon",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
